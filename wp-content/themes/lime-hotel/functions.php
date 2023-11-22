@@ -186,6 +186,7 @@ function room_field_group( $meta_boxes ) {
 		'title'   => esc_html__( 'Room Field Group'),
 		'id'      => 'room_field_group',
 		'context' => 'normal',
+		'post_types' => ['room'],
 		'fields'  => [
 			[
 				'type' => 'text',
@@ -217,6 +218,4 @@ function room_field_group( $meta_boxes ) {
 
 	remove_post_type_support( 'room', 'editor' );
 	return $meta_boxes;	
-
-	// figure out a way to remove editor and adding custom fields to the post, only if it has category set to 'Room'	
 }

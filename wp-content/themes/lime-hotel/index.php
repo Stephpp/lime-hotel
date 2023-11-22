@@ -18,17 +18,19 @@ get_header();
 	<main id="primary" class="site-main">
 
 		<?php
-		$posts = get_posts( array(
+		$rooms = get_posts( array(
 			'numberposts' => -1,
-			'category' => 'Room',
-			'post_type'   => 'post',
+			'post_type'   => 'room',
 			'orderby'     => 'room_title',
-			'order'       => 'ASC',
+			'order'       => 'DESC',
 		) );
 
-		foreach( $posts as $post ){ ?>
+		foreach( $rooms as $room ){ ?>
 			<div class="room">
-				<div class="room__title"><?php echo $post->room_title; ?></div>
+				<!-- link to post url -->
+				<a href="<?=get_permalink( $room->ID )?>">
+					<div class="room__title"><?php echo $room->room_title; ?></div>
+				</a>
 			</div>
 		<?php } ?>
 
