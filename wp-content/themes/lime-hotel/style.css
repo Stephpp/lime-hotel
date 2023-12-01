@@ -47,6 +47,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 # Utilities
 	- Accessibility
 	- Alignments
+# Imports
 
 --------------------------------------------------------------*/
 
@@ -79,6 +80,7 @@ html {
  */
 body {
 	margin: 0;
+	font-family: 'Josefin Sans', sans-serif;
 }
 
 /**
@@ -86,6 +88,7 @@ body {
  */
 main {
 	display: block;
+	margin-top: 50px;
 }
 
 /**
@@ -403,8 +406,8 @@ select,
 optgroup,
 textarea {
 	color: #404040;
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-size: 1rem;
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 1.2rem;
 	line-height: 1.5;
 }
 

@@ -1,0 +1,116 @@
+.page-heading {
+    font-family: 'Sentient', serif;
+    font-weight: 300;
+    font-style: italic;
+    text-align: center;
+    font-size: 3rem;
+}
+
+.page-heading.h1 {
+    font-size: 4rem;
+}
+
+.page-heading.h1 {
+    font-size: 3rem;
+}
+
+.page-heading.h1 {
+    font-size: 2.5rem;
+}
+
+.page-content {
+    padding: 0 15px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.homepage-rooms-section {
+    margin-top: 80px;
+}
+
+.home-room {
+    display: flex;
+    align-items: center;
+    margin-top: 80px;
+    height: 500px;
+}
+
+.home-room-image-wrapper, .home-room-content {
+    flex-basis: 50%;
+}
+
+.home-room-content {
+    padding-right: 15px;
+}
+
+.home-room-image-wrapper {
+    height: 100%;
+}
+
+.home-room-details-wrapper span:not(:last-child)::after {
+    position: absolute;
+    content: '';
+    right: -12px;
+    bottom: 0;
+    height: 25px;
+    width: 1px;
+    background-color: black;
+}
+
+.home-room-details-wrapper span:not(:last-child) {
+    margin-right: 18px;
+    position: relative;
+}
+
+.home-room-image-wrapper img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.home-room-title {
+    text-align: left;
+}
+
+.arrow-link {
+    color: black !important;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    display: flex;
+    align-items: center;
+    padding: 5px 16px 10px 0;
+    border-bottom: 1px solid black;
+    width: fit-content;
+}
+
+.arrow-link img {
+    transition: all 0.2s ease-in-out;
+    width: 40px;
+    margin-left: 10px;
+    opacity: 0;
+}
+
+.arrow-link:hover {
+    padding-left: 8px;
+    padding-right: unset;
+}
+
+.arrow-link:hover img {
+    opacity: 1;
+    margin-left: 18px;
+}
+
+@media (max-width: 992px) {
+    .home-room {
+        flex-direction: column;
+        height: unset;
+        margin-top: 50px;
+    }
+    
+    .home-room-title {
+        margin: 10px 0;
+    }
+
+    .home-room-image-wrapper {
+        margin-top: 30px;
+    }
+}

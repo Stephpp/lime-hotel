@@ -19,7 +19,23 @@ $room_guests = $room->room_guests;
 $room_gallery = $room->room_image_gallery;
 ?>
 
-<h1><?=$room_title?></h1>
-<h2><?=$room_description?></h2>
-<h3><?=$room_size?></h3>
-<h3><?=$room_guests?></h3>
+<section class="page-content room-section">
+    <h1 class="page-heading"><?=$room_title?></h1>
+    <div class="room-content-wrapper">
+        <div class="room-details-wrapper">
+            <div class="room-details-group"><p class="room-details-title">Room Size</p>
+                <p class="room-details-text"><?=$room_size?></p>
+            </div>
+            <div class="room-details-group"><p class="room-details-title">Guests</p>
+                <p class="room-details-text"><?=$room_guests?></p>
+            </div>
+        </div>
+        <div class="room-description-wrapper">
+            <p><?=$room_description?></p>
+        </div>
+    </div>
+    <a class="arrow-link" href="javascript:;">
+        Book <?php echo $room->room_title; ?>
+        <img src="<?php echo get_template_directory_uri() . '/assets/link-arrow.svg' ?>" alt="link arrow"/>
+    </a>
+</section>

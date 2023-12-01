@@ -1,0 +1,62 @@
+.site-header .custom-logo-link {
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    top: 120px;
+    transform: translateX(-50%);
+}
+
+.site-header .swiper {
+    height: 100vh;
+    background-color: wheat;
+}
+
+.site-header .swiper .swiper-slide {
+    position: relative;
+}
+
+.site-header .swiper .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.site-header .swiper .swiper-slide::after {
+    background-color: #653410;
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+}
+
+.site-header .swiper-button-wrapper {
+    z-index: 2  ;
+    position: absolute;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 30px;
+}
+
+.site-header .swiper-button-wrapper .swiper-arrow-button {
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.site-header .swiper-button-wrapper .swiper-button-prev-custom:hover {
+    transform: translateX(-10px);
+}
+
+.site-header .swiper-button-wrapper .swiper-button-next-custom:hover {
+    transform: translateX(10px);
+}
+
+.site-header .swiper-button-wrapper .swiper-arrow-button img {
+    width: 70px;
+}

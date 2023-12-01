@@ -141,6 +141,10 @@ add_action( 'widgets_init', 'lime_hotel_widgets_init' );
  */
 function lime_hotel_scripts() {
 	wp_enqueue_style( 'lime-hotel-style', get_stylesheet_uri(), array(), _S_VERSION );
+	// enquque header and homepage styles
+	wp_enqueue_style( 'lime-hotel-header-style', get_template_directory_uri() . '/css/header.css', array(), _S_VERSION );
+	wp_enqueue_style( 'lime-hotel-home-style', get_template_directory_uri() . '/css/homepage.css', array(), _S_VERSION );
+	wp_enqueue_style( 'lime-hotel-room-style', get_template_directory_uri() . '/css/room.css', array(), _S_VERSION );
 	wp_style_add_data( 'lime-hotel-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( 'lime-hotel-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
@@ -216,6 +220,5 @@ function room_field_group( $meta_boxes ) {
 		],
 	];
 
-	remove_post_type_support( 'room', 'editor' );
 	return $meta_boxes;	
 }

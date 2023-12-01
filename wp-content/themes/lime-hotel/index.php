@@ -17,25 +17,7 @@ get_header();
 
 	<main id="primary" class="site-main">
 
-		<?php
-		$rooms = get_posts( array(
-			'numberposts' => -1,
-			'post_type'   => 'room',
-			'orderby'     => 'room_title',
-			'order'       => 'DESC',
-		) );
-
-		foreach( $rooms as $room ){ ?>
-			<div class="room">
-				<!-- link to post url -->
-				<a href="<?=get_permalink( $room->ID )?>">
-					<div class="room__title"><?php echo $room->room_title; ?></div>
-				</a>
-			</div>
-		<?php } ?>
-
-
 	</main><!-- #main -->
 
 <?php
-get_footer();
+// get_footer();

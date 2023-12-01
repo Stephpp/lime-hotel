@@ -1,0 +1,45 @@
+.room-content-wrapper {
+    display: flex;
+}
+
+.room-details-wrapper {
+    flex-basis: 33%;
+}
+
+.room-description-wrapper {
+    flex-basis: 66%;
+}
+
+.room-section {
+    margin-bottom: 120px;
+}   
+
+.room-section .arrow-link {
+    float: right;
+}
+
+.room-details-title {
+    font-family: 'Sentient', serif;
+    color: #556b2f;
+    font-style: italic;
+    font-size: 3rem;
+    margin-top: unset;
+    margin-bottom: unset;
+}
+
+.room-details-text {
+    margin: unset;
+}
+
+.room-details-group {
+    margin-bottom: 60px;
+}
+
+@media (max-width: 992px) {
+    .room-content-wrapper {
+        flex-direction: column;
+    }
+    .room-section .arrow-link {
+        float: left;
+    }
+}
